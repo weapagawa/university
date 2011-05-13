@@ -12,8 +12,8 @@
                 </a>
             </li>
             <li>
-                <a href="index.php">
-                    <img src="images/alumno.png" href="index.php" />Agregar<br />Alumno
+                <a href="agregar_alumno.php">
+                    <img src="images/alumno.png" href="agregar_alumno.php" />Agregar<br />Alumno
                 </a>
             </li>
             <li>
