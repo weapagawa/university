@@ -1,7 +1,6 @@
 <?php
 
 	include_once('connectvars.php');
-	include_once('barra.php');
 	$conexion =  mysql_connect(host, user, password);
 	//Se establece el charset para la conexion
 	mysql_set_charset('utf8',$conexion);
@@ -52,7 +51,5 @@
 	. "'$email', '$b_date', '$sex', '$category', '$nationality', '$special_needs', '$comments', '$status', '$major', '$minor',"
 	. "'$nokID', '$programID', '$advisorID')") or die('Error inserting: '. mysql_error());
 	
-	echo 'Student Added to database<br />';
-	
-	echo '<a href="agregar_alumno.php">Back</a>';
+	header("Location: confirmacion.php");
 ?>

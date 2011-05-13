@@ -31,9 +31,9 @@
 
 <body>
 <?php include_once('barra.php') ?>
-<h2> Student Information</h2>
             <form method="post" action="insertar_alumno.php"> 
                 <fieldset>
+          			<legend>Student Information</legend>
                     <label for="studentID">Student ID:</label>
                     <input name="studentID" type="text"/>
                     <label for="first_name">First Name:</label>
