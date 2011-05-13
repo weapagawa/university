@@ -17,8 +17,8 @@
                 </a>
             </li>
             <li>
-                <a href="index.php">
-                    <img src="images/instructor.png" href="index.php" />Agregar<br />Instructor
+                <a href="agregar_instructor.php">
+                    <img src="images/instructor.png" href="agregar_instructor.php" />Agregar<br />Instructor
                 </a>
             </li>
             <li>

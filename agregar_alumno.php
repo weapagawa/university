@@ -33,12 +33,12 @@
 <?php include_once('barra.php') ?>
 			<div id="alumno">
             <form method="post" action="insertar_alumno.php"> 
-                <fieldset>
+                <fieldset id="forma_alumno">
           			<legend>Student Information</legend>
 					Student ID: <input name="studentID" type="text"/><br />
                     First Name: <input name="first_name" type="text"/><br />
                     Last Name: <input name="last_name" type="text" /><br />
-					Birth Date: <input id="b_date" name="b_date" type="text"/><br />
+					Birth Date: <input name="b_date" type="text"/><br />
                     Street: <input name="street" type="text"/><br />
                     City: <input name="city" type="text"/><br />
                     Post Code: <input name="postcode" type="text"/><br />
