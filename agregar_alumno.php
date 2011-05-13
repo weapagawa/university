@@ -32,7 +32,7 @@
 <body>
 <?php include_once('barra.php') ?>
 <h2> Student Information</h2>
-            <form method="post" action="controllers/insertar_alumno.php"> 
+            <form method="post" action="insertar_alumno.php"> 
                 <fieldset>
                     <label for="studentID">Student ID:</label>
                     <input name="studentID" type="text"/>
@@ -42,12 +42,12 @@
                     <input name="last_name" type="text" />
                     <label for="b_date">Birth Date:</label>
                     <input id="b_date" name="b_date" type="text"/>
-                    <label for="address">Street:</label>
-                    <input name="address" type="text"/>
-                    <label for="address">City:</label>
-                    <input name="address" type="text"/>
-                    <label for="address">Post Code:</label>
-                    <input name="address" type="text"/>                                        
+                    <label for="street">Street:</label>
+                    <input name="street" type="text"/>
+                    <label for="city">City:</label>
+                    <input name="city" type="text"/>
+                    <label for="postcode">Post Code:</label>
+                    <input name="postcode" type="text"/>                                        
                     <div class="field">
                         <label for="sex">Sex:</label>
                         <input name="sex" type="radio" value="M"  /><span class="form_special">Male</span>
