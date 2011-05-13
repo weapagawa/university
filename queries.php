@@ -28,6 +28,8 @@
 			<li><a href="reporte.php?queryType=10">Query G</a></li>
 			<li><a href="reporte.php?queryType=11">Query H</a></li>
 			<li><a href="reporte.php?queryType=12">Query I</a></li>
+			<li><a href="reporte.php?queryType=13">Promedio de los alumnos</a></li>
+			<li><a href="reporte.php?queryType=14">Historial Acad&eacute;mico</a></li>
 		
 		</fieldset>
 </body>

@@ -366,6 +366,56 @@
 					echo "</table>";
 					break;
 
+            case 13:
+            
+                    $query = "SELECT fname, lname, avg( grade ) as Average
+                    FROM Grades g, Student s
+                    WHERE g.studentID = s.studentID
+                    GROUP BY g.studentID";
+                    $result = mysql_query($query) or die(mysql_error());
+                    
+                    echo "<h2 align=\"center\">Student Grades</h2>";
+                    echo "<table border=1>
+                        <tr>
+                            <th>Name</th>
+                            <th>Grade Average</th>
+                        </tr>";
+                    while($row = mysql_fetch_array($result)) {
+                        echo "<tr>";
+                    echo "<td>".$row['fname'].' '.$row['lname']."</td>";
+                    echo "<td>".$row['Average']."</td>";
+                    echo "</tr>";
+                    }
+                        
+                    echo "</table>";
+                    break;
+                    
+            case 14:
+			//Si el query seleccionado fue el 1, simplemente se muestra el contenido de la tabla employee.
+			$query = "SELECT studentID, fname, lname
+            FROM Student";
+			$result = mysql_query($query) or die(mysql_error());
+            
+             echo "<h2 align=\"center\">Relaci&oacute;n de estudiantes inscritos que ya han cursado materias. Para ver sus materias cursadas y promedio de &eacute;stas, haz click sobre su matricula</h2>";
+			echo "<table border=1>
+					<tr>
+						<th>Student ID</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+					</tr>";
+			while($row = mysql_fetch_array($result)) {
+					echo "<tr>";
+					// Se imprimen los resultados en forma de tabla. Nótese que se concatenan los campos de cada fila
+					// con etiquetas HTML de tabla, para que el resultado en pantalla sea el de celdas con información.
+					echo "<td><a href=\"perfilStudentGrades.php?id=".$row['studentID']."\">".$row['studentID']."</td>
+							<td>".$row['fname']."</td>
+							<td>".$row['lname']."</td>";
+					echo "</tr>";
+			}
+			echo "</table>";
+			break;
+					
+
 		default: 
 			
 	}

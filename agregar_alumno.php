@@ -31,88 +31,67 @@
 
 <body>
 <?php include_once('barra.php') ?>
+			<div id="alumno">
             <form method="post" action="insertar_alumno.php"> 
                 <fieldset>
           			<legend>Student Information</legend>
-                    <label for="studentID">Student ID:</label>
-                    <input name="studentID" type="text"/>
-                    <label for="first_name">First Name:</label>
-                    <input name="first_name" type="text"/>
-                    <label for="last_name">Last Name:</label>
-                    <input name="last_name" type="text" />
-                    <label for="b_date">Birth Date:</label>
-                    <input id="b_date" name="b_date" type="text"/>
-                    <label for="street">Street:</label>
-                    <input name="street" type="text"/>
-                    <label for="city">City:</label>
-                    <input name="city" type="text"/>
-                    <label for="postcode">Post Code:</label>
-                    <input name="postcode" type="text"/>                                        
+					Student ID: <input name="studentID" type="text"/><br />
+                    First Name: <input name="first_name" type="text"/><br />
+                    Last Name: <input name="last_name" type="text" /><br />
+					Birth Date: <input id="b_date" name="b_date" type="text"/><br />
+                    Street: <input name="street" type="text"/><br />
+                    City: <input name="city" type="text"/><br />
+                    Post Code: <input name="postcode" type="text"/><br />
                     <div class="field">
-                        <label for="sex">Sex:</label>
+                        Sex:
                         <input name="sex" type="radio" value="M"  /><span class="form_special">Male</span>
                         <input name="sex" type="radio" value="F" /><span class="form_special">Female</span>
                     </div>
-                    <label for="phone">Phone Number:</label>
-                    <input name="phone" type="text"/>
-                    <label for="email">Email:</label>
-                    <input name="email" type="text"/>
-                    <label for="category">Category:</label>
-                    <input name="category" type="text"/>                                        
-                    <label for="nationality">Nationality:</label>
-                    <input name="nationality" type="text"/>                    
-                    <label for="special_needs">Special Needs:</label>
-                    <input name="special_needs" type="text"/>                    
-                    <label for="comments">Comments:</label>
-                    <input name="comments" type="text"/>
-                    <label for="status">Status:</label>
-                    <input name="status" type="text"/>
-                    <label for="major">Major:</label>
-                    <input name="major" type="text"/>
-                    <label for="minor">Minor:</label>
-                    <input name="minor" type="text"/>                    
-                    <label for="nokID">Next of kin's ID:</label>
-                    <input name="nokID" type="text"/>                    
-                    <label for="nokName">Next of kin's Name:</label>
-                    <input name="nokName" type="text"/>
-                    <label for="nokAddr">Next of kin's Address:</label>
-                    <input name="nokAddr" type="text"/>
-                    <label for="nokPhone">Next of kin's Phone:</label>
-                    <input name="nokPhone" type="text"/>
-                    <label for="program">Program:</label>
-                    <select name="program">
-                        <!--Se revisa si hay por lo menos una fila de resultados-->
-                        <?php if (mysql_num_rows($programs) > 0) {?>
-                        <option selected="selected" value="null">Choose a program</option>
-                        <?php
-                            //Se itera a través de las filas de resultados y se crean opciones en el drop-down
-                                while($row = mysql_fetch_array($programs))
-                                {
-                                    echo "<option value=".$row['id'].">".$row['name']."</option>";
-                                } 
-                            } else {
-                            echo "<option value=\"null\">There are no programs</option>";
-                         }                
-                        ?>        	
-                    </select>
-                    <label for="advisor">Advisor:</label>
-                    <select name="advisor">
-                        <?php if (mysql_num_rows($staff) > 0) {?>
-                        <option selected="selected" value="null">Choose an advisor</option>
-                        <?php
-                        //Se itera a través de las filas de resultados y se crean opciones en el drop-down
-                            while($row = mysql_fetch_array($staff))
-                            {
-                                echo "<option value=".$row['id'].">".$row['name']."</option>";
-                            } 
-                         } else {
-                            echo "<option value=\"null\">There are no advisors</option>";
-                         }
-                        ?>    
-                    </select>
+                    Phone Number: <input name="phone" type="text"/><br />
+                    Email: <input name="email" type="text"/><br />
+                    Category: <input name="category" type="text"/><br />
+                    Nationality: <input name="nationality" type="text"/><br />
+                    Special Needs: <input name="special_needs" type="text"/><br />
+                    Comments: <input name="comments" type="text"/><br />
+                    Status: <input name="status" type="text"/><br />
+                    Major: <input name="major" type="text"/><br />
+                    Minor: <input name="minor" type="text"/><br />
+                    Next of kin's ID: <input name="nokID" type="text"/><br />
+                    Next of kin's Name: <input name="nokName" type="text"/><br />
+                    Next of kin's Address: <input name="nokAddr" type="text"/><br />
+                    Next of kin's Phone: <input name="nokPhone" type="text"/><br />
+                    Program: <select name="program">
+		                    <!--Se revisa si hay por lo menos una fila de resultados-->
+		                    <?php if (mysql_num_rows($programs) > 0) {?>
+		                    <option selected="selected" value="null">Choose a program</option>
+		                    <?php
+		                        //Se itera a través de las filas de resultados y se crean opciones en el drop-down
+		                            while($row = mysql_fetch_array($programs))
+		                            {
+		                                echo "<option value=".$row['id'].">".$row['name']."</option>";
+		                            } 
+		                        } else {
+		                        echo "<option value=\"null\">There are no programs</option>";
+		                     }                
+		                    ?>        	
+                    </select><br />
+                    Advisor: <select name="advisor">
+		                    <?php if (mysql_num_rows($staff) > 0) {?>
+		                    <option selected="selected" value="null">Choose an advisor</option>
+		                    <?php
+		                    //Se itera a través de las filas de resultados y se crean opciones en el drop-down
+		                        while($row = mysql_fetch_array($staff))
+		                        {
+		                            echo "<option value=".$row['id'].">".$row['name']."</option>";
+		                        } 
+		                     } else {
+		                        echo "<option value=\"null\">There are no advisors</option>";
+		                     }
+		                    ?>    
+                    </select><br />
                     <input class="form_button" type="submit" value="Submit">
                 </fieldset>
             </form>
-
+            </div>
 </body>
 </html>
