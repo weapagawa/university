@@ -22,8 +22,8 @@
                 </a>
             </li>
             <li>
-                <a href="index.php">
-                    <img src="images/staff.png" href="index.php" />Agregar<br />Staff
+                <a href="agregar_staff.php">
+                    <img src="images/staff.png" href="agregar_staff.php" />Agregar<br />Staff
                 </a>
             </li>  
             <li>
