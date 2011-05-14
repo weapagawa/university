@@ -17,9 +17,8 @@
 		die ('No se encuentra la base de datos seleccionada : ' . mysql_error());
 	}
 
-	$programs = mysql_query("SELECT id, name FROM Program") or die ('ERROR PROGRAMS: ' . mysql_error());	
+	$dept = mysql_query("SELECT dnumber, dname FROM Department") or die ('ERROR DEPARTMENTS: ' . mysql_error());	
 
-	$staff = mysql_query("SELECT id, name FROM Staff") or die ('ERROR STAFF: ' . mysql_error());
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -40,7 +39,20 @@
                     Phone Number: <input name="phone" type="text"/><br />
                     Email: <input name="email" type="text"/><br />
                     Room Number: <input name="roomNumber" type="text"/><br />
-                    Department Number: <input name="dNumber" type="text"/><br />
+                    Department Number: <select name="dNumber">
+		                    <!--Se revisa si hay por lo menos una fila de resultados-->
+		                    <?php if (mysql_num_rows($dept) > 0) {?>
+		                    <option selected="selected" value="null">Choose a department</option>
+		                    <?php
+		                            while($row = mysql_fetch_array($dept))
+		                            {
+		                                echo "<option value=".$row['dnumber'].">".$row['dname']."</option>";
+		                            } 
+		                        } else {
+		                        echo "<option value=\"null\">There are no programs</option>";
+		                     }                
+		                    ?>        	
+                    </select><br />
                     <input class="form_button" type="submit" value="Submit">
                 </fieldset>
             </form>
