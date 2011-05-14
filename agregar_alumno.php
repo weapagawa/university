@@ -26,14 +26,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="style.css" rel="stylesheet">
-<title>University Accomodations</title>
+<title>Agregar Alumno</title>
 </head>
 
 <body>
 <?php include_once('barra.php') ?>
-			<div id="alumno">
+			<div>
             <form method="post" action="insertar_alumno.php"> 
-                <fieldset id="forma_alumno">
+                <fieldset class="forma_alumno">
           			<legend>Student Information</legend>
 					Student ID: <input name="studentID" type="text"/><br />
                     First Name: <input name="first_name" type="text"/><br />

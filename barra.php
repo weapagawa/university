@@ -8,7 +8,7 @@
             </li>
             <li>
                 <a href="queries.php">
-                    <img src="images/reportes.png" href="queries.php" />Queries
+                    <img src="images/reportes.png" href="queries.php" />Reportes
                 </a>
             </li>
             <li>
@@ -27,13 +27,13 @@
                 </a>
             </li>  
             <li>
-                <a href="index.php">
-                    <img src="images/contrato.png" href="index.php" />Realizar<br />Contrato
+                <a href="nuevo_contrato.php">
+                    <img src="images/contrato.png" href="nuevo_contrato.php" />Realizar<br />Contrato
                 </a>
             </li>  
             <li>
-                <a href="index.php">
-                    <img src="images/cancelar.png" href="index.php" />Cancelar<br />Contrato
+                <a href="cancelar_contrato.php">
+                    <img src="images/cancelar.png" href="cancelar_contrato.php" />Cancelar<br />Contrato
                 </a>
             </li>                                    
         </ul>

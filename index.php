@@ -10,7 +10,11 @@
 <div id="master">
 <?php include_once("barra.php"); ?>
 <h1>Bienvenido!</h1>
-<p>Probando</p>
+<p>
+	Ricardo Cruz 619049<br />
+	Esteban Lopez 904835<br />
+	Francisco Carmona 1137094<br />
+</p>
 </div>
 </body>
 </html>

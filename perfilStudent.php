@@ -1,6 +1,7 @@
 ﻿<?php
 
 	require_once('connectvars.php');
+	include_once('barra.php');
 	/*mysql_connect es un metodo especial para realizar la conexion a la BD,
 	los parametros pueden ser revisados en www.php.net*/
 	$conexion =  mysql_connect(host, user, password);

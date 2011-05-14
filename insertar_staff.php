@@ -22,9 +22,8 @@
 	$position = $_POST['position'];
 	$phone = $_POST['phone'];
 	$email = $_POST['email'];
-	$postcode = $_POST['postcode'];
 	$roomnNumber = $_POST['room_number'];
-	$dnumber = $_POST['d_number'];
+	$dnumber = $_POST['dNumber'];
 	
 		
 			

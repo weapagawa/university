@@ -396,7 +396,7 @@
             FROM Student";
 			$result = mysql_query($query) or die(mysql_error());
             
-             echo "<h2 align=\"center\">Relaci&oacute;n de estudiantes inscritos que ya han cursado materias. Para ver sus materias cursadas y promedio de &eacute;stas, haz click sobre su matricula</h2>";
+             echo "<h2 align=\"center\">Historial Acad&eacute;mico de los estudiantes</h2>";
 			echo "<table border=1>
 					<tr>
 						<th>Student ID</th>

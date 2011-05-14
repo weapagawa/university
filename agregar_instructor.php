@@ -25,14 +25,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="style.css" rel="stylesheet">
-<title>University Accomodations</title>
+<title>Agregar Instructor</title>
 </head>
 
 <body>
 <?php include_once('barra.php') ?>
-			<div id="instructor">
+			<div>
             <form method="post" action="insertar_instructor.php"> 
-                <fieldset id="forma_alumno">
+                <fieldset class="forma_alumno">
           			<legend>Instructor Information</legend>
 					Instructor ID: <input name="instructorID" type="text"/><br />
                     Name: <input name="name" type="text"/><br />
@@ -49,7 +49,7 @@
 		                                echo "<option value=".$row['dnumber'].">".$row['dname']."</option>";
 		                            } 
 		                        } else {
-		                        echo "<option value=\"null\">There are no programs</option>";
+		                        echo "<option value=\"null\">There are no departments</option>";
 		                     }                
 		                    ?>        	
                     </select><br />
